@@ -118,16 +118,9 @@ Each server folder contains its own `README.md` with full setup, configuration, 
 
 ## About
 
-Network Engineer with deep roots in datacenter and enterprise infrastructure. Background spans security, routing/switching, cloud, and automation across a wide range of platforms and environments.
+Network Engineer with deep roots in datacenter and enterprise infrastructure — BGP, VRFs, VXLAN, multi-ISP traffic engineering, and large-scale automation. Passionate about closing the gap between traditional network operations and modern AI-driven tooling.
 
-**Platforms & Vendors**
-- **Firewalls & Security:** Palo Alto NGFW (PAN-OS, multi-vsys, Panorama), Cisco FTD, Cisco ASA
-- **Routing & Switching:** Cisco Nexus (vPC, VXLAN/EVPN), Cisco IOS/IOS-XE, BGP, VRFs, multi-ISP traffic engineering
-- **Cloud & Virtualization:** AWS Networking (VPC, Transit Gateway, Direct Connect), VMware vSphere
-- **Monitoring & Observability:** Datadog, Observium, LogicMonitor, ServiceNow
-- **Automation:** Python, Ansible, Terraform, NetBox (IPAM/DCIM), REST APIs, MCP
-
-Passionate about closing the gap between traditional network operations and modern AI-driven tooling. All projects are built against real infrastructure and intended for production use.
+All projects are built against real infrastructure and intended for production use.
 
 ---
 
