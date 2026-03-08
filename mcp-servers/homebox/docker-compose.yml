@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  homebox-mcp-server:
+    build: .
+    container_name: homebox-mcp-server
+    environment:
+      - HOMEBOX_URL=${HOMEBOX_URL}
+      - HOMEBOX_TOKEN=${HOMEBOX_TOKEN}
+      - HOMEBOX_USERNAME=${HOMEBOX_USERNAME}
+      - HOMEBOX_PASSWORD=${HOMEBOX_PASSWORD}
+      - HOMEBOX_SSL_VERIFY=${HOMEBOX_SSL_VERIFY:-true}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    networks:
+      - homebox-mcp
+
+networks:
+  homebox-mcp:
+    driver: bridge

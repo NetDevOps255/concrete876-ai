@@ -1,0 +1,15 @@
+services:
+  mcp-server:
+    build: .
+    container_name: bookstack-mcp-server
+    environment:
+      - BOOKSTACK_BASE_URL=${BOOKSTACK_BASE_URL}
+      - BOOKSTACK_TOKEN_ID=${BOOKSTACK_TOKEN_ID}
+      - BOOKSTACK_TOKEN_SECRET=${BOOKSTACK_TOKEN_SECRET}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src:/app/src
+    # Use host network to easily access BookStack on localhost (if needed)
+    # or ensure they share a network if BookStack is in another container
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"

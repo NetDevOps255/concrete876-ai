@@ -1,0 +1,12 @@
+services:
+  opnsense-mcp-server:
+    container_name: opnsense-mcp-server
+    build: .
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    volumes:
+      - ./server.py:/app/server.py:ro
+    command: tail -f /dev/null

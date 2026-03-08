@@ -1,0 +1,12 @@
+services:
+  paloalto-mcp-server:
+    build: .
+    container_name: paloalto-mcp-server
+    restart: unless-stopped
+    stdin_open: true   # required for stdio MCP transport
+    tty: false
+    environment:
+      - PA_HOST=${PA_HOST}
+      - PA_API_KEY=${PA_API_KEY}
+      - PA_VSYS=${PA_VSYS:-vsys1}
+      - PA_VERIFY_SSL=${PA_VERIFY_SSL:-false}

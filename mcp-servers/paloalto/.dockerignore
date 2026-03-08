@@ -1,0 +1,58 @@
+# Git
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation
+README.md
+README.docx
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+
+# Credentials
+credentials.json
+secrets.json
+*_credentials.txt
+
+# Claude Code config
+claude_code_config.json
