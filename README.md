@@ -128,3 +128,4 @@ All projects are built against real infrastructure and intended for production u
 
 - 🌐 [Website](https://traviscarr.dev)
 - 🐙 [GitHub](https://github.com/NetDevOps255/concrete876-ai)
+- 💼 [LinkedIn](https://www.linkedin.com/in/travis-carr/)
