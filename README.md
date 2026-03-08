@@ -7,7 +7,7 @@ A collection of AI-driven tools for network operations, infrastructure automatio
 
 **concrete876-ai** is a collection of production-grade MCP (Model Context Protocol) servers and automation tools built at the intersection of network engineering and artificial intelligence. These integrations allow Claude to directly interact with real infrastructure — firewalls, monitoring platforms, documentation systems, and inventory management — through natural language.
 
-All tools are containerized with Docker and designed for real-world environments. Expect Palo Alto, OPNsense, Observium, and self-hosted stacks throughout.
+All tools are containerized with Docker and designed for real-world environments. Expect Palo Alto, OPNsense, NetBox, Observium, and self-hosted stacks throughout.
 
 ---
 
@@ -17,9 +17,11 @@ All tools are containerized with Docker and designed for real-world environments
 |---|---|---|---|
 | [`mcp-servers/paloalto`](./mcp-servers/paloalto) | Palo Alto NGFW | 10 | Firewall ops via PAN-OS XML API — policies, sessions, BGP, logs, address objects, commit |
 | [`mcp-servers/opnsense`](./mcp-servers/opnsense) | OPNsense Firewall | 30+ | Full firewall management — aliases, filter rules, NAT (DNAT/SNAT/1:1/NPT), savepoints, rollback |
+| [`mcp-servers/netbox`](./mcp-servers/netbox) | NetBox | 20+ | DCIM & IPAM — devices, interfaces, IPs, prefixes, VLANs, VRFs, sites, circuits, cables |
 | [`mcp-servers/observium`](./mcp-servers/observium) | Observium NMS | 10 | Network monitoring — devices, ports, alerts, sensors, inventory, device management |
 | [`mcp-servers/bookstack`](./mcp-servers/bookstack) | BookStack | 40+ | Documentation management — books, pages, chapters, shelves, users, roles, search, attachments |
 | [`mcp-servers/homebox`](./mcp-servers/homebox) | Homebox | 12 | Home inventory — items, locations, labels, attachments, image-to-inventory via Claude vision |
+| [`mcp-servers/uptime-kuma`](./mcp-servers/uptime-kuma) | Uptime Kuma | 26 | Uptime monitoring — monitors, heartbeats, notifications, status pages, maintenance windows, tags |
 
 ---
 
@@ -53,10 +55,24 @@ Query and manage devices in Observium. Requires Observium Subscription Edition (
 
 ---
 
+### NetBox DCIM & IPAM MCP
+Full read/write access to NetBox for device, interface, and IP address management. The source of truth for infrastructure documentation — use it to look up IPs, document new devices, manage VLANs/VRFs, and pull audit changelogs. Includes a generic `get_objects` tool supporting 30+ NetBox object types.
+
+**Key tool groups:** Device management, interface management, IP address management, prefix/subnet queries, VLAN management, VRF management, sites, circuits, cables, changelogs
+
+---
+
 ### Homebox Inventory MCP
 Natural language inventory management for self-hosted Homebox. Supports image-to-inventory: share a photo, Claude extracts item details via vision, creates the item, and uploads the photo as an attachment automatically.
 
 **Key tools:** `search_items`, `get_item`, `create_item`, `update_item`, `delete_item`, `get_locations`, `create_location`, `get_labels`, `create_label`, `upload_attachment`, `get_statistics`
+
+---
+
+### Uptime Kuma MCP
+Monitor management for self-hosted Uptime Kuma via the Socket.IO API. Full lifecycle control over monitors plus heartbeat history, uptime stats, notification channels, status pages, maintenance windows, and tags.
+
+**Key tool groups:** Monitor management (create/edit/pause/resume/delete), heartbeat history, uptime percentages, notifications (Telegram/Slack/Discord/webhook/email), status pages, maintenance windows, tags, system info
 
 ---
 
@@ -102,9 +118,16 @@ Each server folder contains its own `README.md` with full setup, configuration, 
 
 ## About
 
-Network Engineer with deep roots in enterprise infrastructure — BGP, VRFs, VXLAN, multi-ISP traffic engineering, and large-scale automation. Passionate about closing the gap between traditional network operations and modern AI-driven tooling.
+Network Engineer with deep roots in datacenter and enterprise infrastructure. Background spans security, routing/switching, cloud, and automation across a wide range of platforms and environments.
 
-All projects are built against real infrastructure and intended for production use.
+**Platforms & Vendors**
+- **Firewalls & Security:** Palo Alto NGFW (PAN-OS, multi-vsys, Panorama), Cisco FTD, Cisco ASA
+- **Routing & Switching:** Cisco Nexus (vPC, VXLAN/EVPN), Cisco IOS/IOS-XE, BGP, VRFs, multi-ISP traffic engineering
+- **Cloud & Virtualization:** AWS Networking (VPC, Transit Gateway, Direct Connect), VMware vSphere
+- **Monitoring & Observability:** Datadog, Observium, LogicMonitor, ServiceNow
+- **Automation:** Python, Ansible, Terraform, NetBox (IPAM/DCIM), REST APIs, MCP
+
+Passionate about closing the gap between traditional network operations and modern AI-driven tooling. All projects are built against real infrastructure and intended for production use.
 
 ---
 
