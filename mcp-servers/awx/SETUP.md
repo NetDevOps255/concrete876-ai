@@ -79,8 +79,8 @@ curl -X POST https://awx.test.com/api/v2/tokens/ \
 
 # Add to .claude.json
 "awx-webhook": {
-      "command": "<PATH-to-Virtual-ENV>/.venv/Scripts/python.exe",
+      "command": "PATH-to-Virtual-ENV/.venv/Scripts/python.exe",
       "args": [
-        "<PATH-to-Python-Script>/awx_webhook_agent.py"
+        "PATH-to-Python-Script/awx_webhook_agent.py"
       ]
     }
