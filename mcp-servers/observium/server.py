@@ -8,13 +8,9 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# OBSERVIUM_URL = os.getenv("OBSERVIUM_URL", "")
-# OBSERVIUM_USER = os.getenv("OBSERVIUM_USER", "")
-# OBSERVIUM_PASS = os.getenv("OBSERVIUM_PASS", "")
-
-OBSERVIUM_URL="http://10.17.1.32"
-OBSERVIUM_USER="concrete-ai"
-OBSERVIUM_PASS="mX$fyJz9w5ts9b*!!w*T"
+OBSERVIUM_URL = os.getenv("OBSERVIUM_URL", "")
+OBSERVIUM_USER = os.getenv("OBSERVIUM_USER", "")
+OBSERVIUM_PASS = os.getenv("OBSERVIUM_PASS", "")
 
 if not OBSERVIUM_URL.endswith('/'):
     OBSERVIUM_URL += '/'
